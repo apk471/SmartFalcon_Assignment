@@ -1,0 +1,29 @@
+{
+  "name": "account-contract",
+  "version": "1.0.0",
+  "description": "Hyperledger Fabric TypeScript chaincode for accounts",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -p tsconfig.json -w",
+    "clean": "rimraf lib",
+    "prepack": "npm run build"
+  },
+  "files": [
+    "lib",
+    "package.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "fabric-contract-api": "^2.5.0",
+    "fabric-shim": "^2.5.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5",
+    "rimraf": "^3.0.2",
+    "@types/node": "^18.0.0"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
