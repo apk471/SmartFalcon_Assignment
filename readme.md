@@ -2,6 +2,10 @@
 
 Blockchain-based financial asset management system built with Hyperledger Fabric.
 
+## Output
+
+Please check the outputs of the routes in ` SmartFalcone Output.pdf` file
+
 ## Assignment Overview
 
 This project implements a complete blockchain solution for managing financial assets with features:
