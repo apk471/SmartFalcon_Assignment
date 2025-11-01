@@ -92,11 +92,11 @@ export class AccountContract extends Contract {
       const res = await iterator.next();
       if (res.value) {
         const record = {
-          txId: res.value.txId, // ✅ correct property name
-          timestamp: res.value.timestamp, // protobuf Timestamp
-          isDelete: res.value.isDelete, // ✅ correct property name
+          txId: res.value.txId,
+          timestamp: res.value.timestamp,
+          isDelete: res.value.isDelete,
           value: res.value.value
-            ? JSON.parse(res.value.value.toString()) // ✅ just .toString(), no argument
+            ? JSON.parse(res.value.value.toString())
             : null,
         };
         results.push(record);
@@ -108,6 +108,11 @@ export class AccountContract extends Contract {
     }
 
     return JSON.stringify(results);
+  }
+
+  public async Ping(ctx: Context): Promise<string> {
+    console.log("✅ Chaincode Ping() function executed successfully!");
+    return "Ping successful! Chaincode is up and running 🚀";
   }
 
   async AccountExists(ctx: Context, accountId: string) {

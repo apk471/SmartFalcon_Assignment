@@ -75,6 +75,10 @@ class AccountContract extends fabric_contract_api_1.Contract {
         }
         return JSON.stringify(results);
     }
+    async Ping(ctx) {
+        console.log("✅ Chaincode Ping() function executed successfully!");
+        return "Ping successful! Chaincode is up and running 🚀";
+    }
     async AccountExists(ctx, accountId) {
         const data = await ctx.stub.getState(accountId);
         return !!data && data.length > 0;
