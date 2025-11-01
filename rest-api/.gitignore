@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+npm-debug.log
+
+# Build outputs
+dist/
+*.tar.gz
+
+# Environment files
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Fabric artifacts
+fabric-samples/bin/
+fabric-samples/config/
+*.tar.gz
+wallet/
+EOF
